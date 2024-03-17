@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="icon" type="png"  href="https://www.iconpacks.net/icons/1/free-user-login-icon-305-thumb.png">
+    
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <style>
+        body{
+            background-image: url(https://preview.redd.it/clean-black-wallpaper-1920x1080-v0-3764zpt69h891.jpg?width=1080&crop=smart&auto=webp&s=593e47425f2e47fdabb4a4672d1ccb568ee1a954);
+
+            background-position-y: -85px;
+
+        }
+        .d1{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 90vh;
+            width: 100%;
+            text-align: center;
+
+            
+        }
+
+        form{
+    
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            filter: drop-shadow(0.75rem 0 0.75rem rgb(82, 82, 82));
+
+           
+            
+           
+
+         
+
+           
+
+        }
+
+        input[type=text], input[type=password]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        input[type=submit]{
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        input[type=submit]:hover{
+            background-color: #000000;
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+
+
+        }
+
+        .signup{
+            text-decoration: none;
+            color: white;
+            padding: 30px;
+            margin: 30px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .d2{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+     
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+
+            
+        }
+
+        .signupbtn{
+            background: linear-gradient(34deg, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 100%);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+          outline: 2px solid #ffffff;
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .signupbtn:hover,
+        input[type="submit"]:hover { 
+          transform: scale(1.05);  
+          transition: transform 0.2s ease-in-out; 
+        }
+
+        h2 {
+            font-family: 'Your Chosen Font', sans-serif; 
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+          }
+          form {
+            background: linear-gradient(to bottom, #000000, #5c5c5c); 
+           }
+
+        
+                     
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="d1">
+        
+        <form>
+            <h2>Log in</h2>
+            <p id="error" style="color: red;"></p>
+            <p id="success" style="color: green;"></p>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="AbdullahFK" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="*******" required><br><br>
+           
+            
+            <input type="submit" value="Log in" class="loginbtn" onclick="validateinputs()" ></input>
+
+            
+            
+            
+        </form>
+        
+        
+    </div>
+    <div class="d2">
+        <p style="color: white;">Don't have an account? <input type="button" value="Sign Up" class="signupbtn" onclick="window.location.href='signup.html'"></input></p>
+
+    </div>
+
+
+    <script src="/myscript2.js"></script>
+</body>
+</html>
