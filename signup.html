@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" type="png"  href="https://www.iconpacks.net/icons/1/free-user-login-icon-305-thumb.png">
+    <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    
+    <style>
+        body{
+            background-image: url(https://preview.redd.it/clean-black-wallpaper-1920x1080-v0-3764zpt69h891.jpg?width=1080&crop=smart&auto=webp&s=593e47425f2e47fdabb4a4672d1ccb568ee1a954);
+            background-position-y: -85px;
+
+        }
+        .div1
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+           
+            border-radius: 10px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #000000, #5c5c5c); 
+            filter: drop-shadow(0.75rem 0 0.75rem rgb(82, 82, 82));
+        }
+        form{
+            position: flex;
+            
+
+
+            
+        
+      
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background-color: #000000;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        h1{
+            color: white;
+        }
+
+        p{
+            color: rgb(255, 255, 255);
+        }
+
+        .d2{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: absolute;
+            top: 90%;
+            left: 78%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+
+           width: 50%;
+           height: 90px;
+          
+
+         
+            
+
+            
+        }
+
+        .loginbtn{
+            background: linear-gradient(34deg, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 100%);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+          outline: 2px solid #ffffff;
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .loginbtn:hover,
+        input[type="button"]:hover { 
+          transform: scale(1.05); 
+          transition: transform 0.2s ease-in-out;
+        }
+
+        h2 {
+            font-family: 'Your Chosen Font', sans-serif; 
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+          }
+
+            .genderdiv{
+          
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            select{
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                border: none;
+            }
+
+            select:focus{
+                outline: 2px solid #ffffff;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            select:hover{
+                transform: scale(1.05);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .dob{
+                padding: 10px;
+                margin: 10px;
+                border-radius: 10px;
+                border: none;
+            }
+
+            .dob:focus{
+                outline: 2px solid #ffffff;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .dob:hover{
+                transform: scale(1.05);
+                transition: transform 0.2s ease-in-out;
+            }
+            
+
+            .resetbtn{
+                width: 20%;
+                background-color: #000000;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                margin-right: 90%;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 15px;
+
+         
+
+                
+
+            }
+
+            .resetbtn:hover{
+                transform: scale(1.05);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .signupbtn{
+                width: 20%;
+                background-color: #000000;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                margin-left: 90%;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 15px;
+
+            }
+
+            .signupbtn:hover{
+                transform: scale(1.05);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            
+
+            
+
+
+
+
+            
+        
+    </style>
+
+</head>
+<body>
+
+    <div class="div1">
+        <form id="formid">
+            <h1>Sign Up</h1>
+            <p id="error" style="color: red;"></p>
+            <p id="success" style="color: green;"></p>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+
+            <input type="password" name="password" placeholder="Password" id="password" required>
+   
+            <input type="password" name="confirm_password" placeholder="Confirm Password" id="confirmpassword"  required>
+
+            <br>
+
+            <div class="genderdiv">
+                <form >
+                    <select name="gen" id="genders">
+                      <option value="Select">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Perfer not to say</option>
+                    </select>
+                  </form>
+            </div>
+
+            <input type="text" name="email" placeholder="Email" id="email" required>
+            <input type="text" name="phone" placeholder="Phone" id="phone" required>
+            <br>
+
+            <input class="dob" type="date" name="dob" id="dataofbirth" >
+            <input type="text" name="address" placeholder="Address" id="address" required>
+            <input type="text" name="country" placeholder="Country" id="country" required>
+
+            <input type="submit" value="Sign Up" class="signupbtn" onclick="validatesignup()">
+            <input type="reset" value="Reset" class="resetbtn" onclick="resetbtn()">
+            
+        </form>
+
+        <div class="d2">
+        
+    
+            <p>Already have an account? <input type="button" value="Log In" class="loginbtn" onclick="window.location.href='task2.html'""></p>
+        </div>
+
+        
+    </div>
+
+    
+
+
+    <script src="/myScript.js"></script>
+</body>
+</html>
